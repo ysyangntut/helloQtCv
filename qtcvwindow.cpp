@@ -62,6 +62,8 @@ void QtCvWindow::on_pbShowImg_clicked()
         w = this->ui->lbImg->width();
         h = this->ui->lbImg->height();
         QImage qimg(img.data, img.cols, img.rows, img.step, QImage::Format_BGR888);
+        // Keep the image aspect ratio
+        // Interpolation in a smooth way
         QPixmap qpixmap = QPixmap::fromImage(qimg).scaled(w, h, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         this->ui->lbImg->setPixmap(qpixmap);
     }
