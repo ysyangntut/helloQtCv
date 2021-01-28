@@ -19,7 +19,11 @@ QtCvWindow::QtCvWindow(QWidget *parent)
     int cvMinorVer = CV_MINOR_VERSION;
     char buf[1000];
     snprintf(buf, 1000, "OpenCV ver. %d.%d", cvMajorVer, cvMinorVer);
-    this->ui->lbOpencvVersion->setText(cv::getBuildInformation().c_str());
+    this->ui->edOpencvVersion->clear();
+    this->ui->edOpencvVersion->append(cv::getBuildInformation().c_str());
+    this->ui->edOpencvVersion->setFontFamily("Consolas");
+    this->ui->edOpencvVersion->setFontPointSize(12);
+
 }
 
 QtCvWindow::~QtCvWindow()

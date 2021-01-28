@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>QtCvWindow</class>
  <widget class="QMainWindow" name="QtCvWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -66,26 +69,35 @@
      <string>Show img</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbOpencvVersion">
+   <widget class="QTextEdit" name="edOpencvVersion">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>20</x>
       <y>540</y>
-      <width>821</width>
+      <width>971</width>
       <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>6</pointsize>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
+    <property name="mouseTracking">
+     <bool>false</bool>
     </property>
-    <property name="text">
-     <string>OpenCV version:</string>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
